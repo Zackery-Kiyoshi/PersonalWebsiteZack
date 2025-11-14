@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Card from '../components/Card.jsx';
-import MergeCube from '../components/MergeCube.jsx';
+
+const MergeCube = React.lazy(() => import('../components/MergeCube.jsx'));
+
+
+// ...
+<Suspense fallback={<div className="h-64 flex items-center justify-center">Loading cube…</div>}>
+    <MergeCube />
+</Suspense>
+
 
 export default function Home() {
   return (
