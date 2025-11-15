@@ -6,6 +6,7 @@ import Work from './pages/Work.jsx';
 import MergeGaming from './pages/MergeGaming.jsx';
 import MergeBlaster from './pages/MergeBlaster.jsx';
 import MergeEdu from './pages/MergeEdu.jsx';
+import CubeTracking from './pages/CubeTracking.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/work/merge-gaming" element={<MergeGaming />} />
         <Route path="/work/merge-blaster" element={<MergeBlaster />} />
         <Route path="/work/merge-edu" element={<MergeEdu />} />
+        <Route path="/cube-tracking" element={<CubeTracking />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
