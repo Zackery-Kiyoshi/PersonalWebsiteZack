@@ -3,8 +3,8 @@ import * as THREE from 'three';
 import { motion } from 'framer-motion';
 
 export default function MergeCube({
-  rotationSpeed = 0.01,
-  className = 'w-full h-64', // default: small preview
+  rotationSpeed = 0.0075,
+  className = 'w-64 h-64', // default: small preview
 }) {
   const mountRef = useRef();
   const speedRef = useRef(rotationSpeed);
@@ -58,7 +58,7 @@ export default function MergeCube({
     light.position.set(2, 3, 5);
     scene.add(light);
 
-    camera.position.z = 3;
+    camera.position.z = 1.5;
 
     function onResize() {
       if (!mount) return;

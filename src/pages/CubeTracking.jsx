@@ -34,7 +34,7 @@ export default function CubeTracking() {
         <input
           type="range"
           min="0"
-          max="50"
+          max="30"
           step="1"
           value={speed * 1000} // 0–0.05 mapped to 0–50
           onChange={(e) => setSpeed(Number(e.target.value) / 1000)}
