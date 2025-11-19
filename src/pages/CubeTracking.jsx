@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MergeCube from '../components/MergeCube.jsx';
 
+/// TODO: Tracking, set rotation and axis speeds, color background
+
 export default function CubeTracking() {
   // speed in radians-ish per frame; 0.01 is a nice default
   const [speed, setSpeed] = useState(0.01);

@@ -11,19 +11,22 @@ export default function Work() {
       </div>
 
       <div className="space-y-8">
-        <Section title="Merge Gaming" link="/work/merge-gaming" />
-        <Section title="Merge Blaster" link="/work/merge-blaster" />
-        <Section title="Merge Edu" link="/work/merge-edu" />
+        <Section title="Merge Gaming" description="The MERGE cube and Gaming in AR/VR" link="/work/merge-gaming" />
+        <Section title="Merge Blaster"  link="/work/merge-blaster" />
+        <Section title="Merge Edu" description="MERGE when we decided that the education market might be ready to Merge Realities" link="/work/merge-edu" />
       </div>
     </motion.section>
   );
 }
 
-function Section({ title, link }) {
+function Section({ title, description, link }) {
   return (
     <div className="rounded-lg p-6 bg-white border">
       <h2 className="text-2xl font-semibold">{title}</h2>
-      <p className="text-gray-700 mt-2">Short description placeholder — expand in standalone page.</p>
+      if(description==null)
+        <p className="text-gray-700 mt-2">Placeholder description</p>
+      else
+        <p className="text-gray-700 mt-2">{description}</p>
       <div className="mt-4">
         <Link to={link} className="inline-block px-3 py-2 border rounded text-sm hover:bg-gray-50">View details</Link>
       </div>
