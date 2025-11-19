@@ -23,9 +23,6 @@ function Section({ title, description, link }) {
   return (
     <div className="rounded-lg p-6 bg-white border">
       <h2 className="text-2xl font-semibold">{title}</h2>
-      if(description==null)
-        <p className="text-gray-700 mt-2">Placeholder description</p>
-      else
         <p className="text-gray-700 mt-2">{description}</p>
       <div className="mt-4">
         <Link to={link} className="inline-block px-3 py-2 border rounded text-sm hover:bg-gray-50">View details</Link>
